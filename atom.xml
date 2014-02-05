@@ -5,21 +5,21 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>4xFlavor</title>
- <link href="http://danhixon.github.com/atom.xml" rel="self"/>
- <link href="http://danhixon.github.com/"/>
+ <link href="http://hpc-sect.github.io/atom.xml" rel="self"/>
+ <link href="http://hpc-sect.github.io/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://danhixon.github.com/</id>
+ <id>http://hpc-sect.github.io/</id>
  <author>
-   <name>Dan Hixon</name>
-   <email>danhixon@gmail.com</email>
+   <name>Ronak Kogta</name>
+   <email>rarchk@gmail.com</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://danhixon.github.com{{ post.url }}"/>
+   <link href="http://hpc-sect.github.io{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://danhixon.github.com{{ post.id }}</id>
+   <id>http://hpc-sect.github.io{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
