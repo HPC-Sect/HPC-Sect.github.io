@@ -1,10 +1,12 @@
-safe:        false
-auto:        false
-
-source:      .
 destination: ./_site
-plugins:     ./_plugins
-
-future:      true
+auto:        false
 lsi:         false
-pygments:    false
+server_port: 4000
+pygments:    true
+markdown:    rdiscount
+permalink:   date
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_dir:    images/latex
+  png_url:    /images/latex

@@ -1,58 +1,119 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"  />
-<meta name="description" content="RarchK  Codes" />
-<meta name="keywords" content="hpc,parallel,operatingsystems" />
-<meta name="author" content="RarchK" />
-<link rel="stylesheet" type="text/css" href="/css/default.css" />
-<link rel="stylesheet" type="text/css" href="/css/pretty_code.css" />
-<link rel="alternate" type="application/atom+xml" href="http://hpc-sect.github.io/atom.xml" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<title>HPC Sect - HPC for enthusiasts</title>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>{{ page.title }}</title>
+  <meta name="author" content="HPC Sect" />
+  <link rel='alternate' type='application/atom+xml' title='full articles' href='http://feeds2.feedburner.com/hpc-sect' />
+  <link rel='alternate' type='application/rss+xml' title='comments' href='http://hpc-sect.disqus.com/comments.rss' />
+
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+
+  <!-- homepage CSS, imports others -->
+  <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
 </head>
 
 <body>
-<div id="wrap">
-	<div id="header">
-		<p id="toplinks">
+  <div id="site">
+    <div id="page">
 
-		</p>
+      <div id="sidebar">
+        <img src="/images/david-emparis.jpg" />
+        <div id="header">
+          <a href="/"><h1>HPC Sect</h1></a>
+        </div>
 
-		<h1><a href="/"><div id="logo"></div>HPC<span class="fade">Sect</span></a></h1>
-		<div class="slogan">
-				<a href="/code.html" class="pink">References{.*}</a> :|: 
-				<a href="/os.html" class="green">Articles{HPC}</a> :|: 
-				<a href="/life.html" class="orange">Team{us}</a>
-		</div>
+        <h3>HPC for Enthusiasts</h3>
+        <ul>
+          <li><p class='indented'>email: hpcsect &lt;at&gt; gmail</p></li>
+          <li>
+            <a href="http://github.com/hpc-sect">github</a>
+          </li>
+        </ul>
 
-</div>
+        <h3 class='sidebar-title'>Blog Posts</h3>
+        <ul>
+          <li>
+            <table>
+              {% for post in site.posts %}
+              <tr valign='top'>
+                <td nowrap><span class='date'>{{ post.date | date_to_string }}</span></td>
+                <td> &raquo; </td>
+                <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+              </tr>
+              {% endfor %}
+            </table>
+          </li>
+        </ul>
+        
+        <!-->
+        <h3 class='sidebar-title'>Recent Comments</h3>
+        <ul>
+          <li>
+            <div id="dsq-recentcomments" class="dsq-widget">
+              <script type="text/javascript" src="http://disqus.com/forums/alpinegizmo/recent_comments_widget.js?num_items=5&avatar_size=32"></script>
+            </div>          
+          </li>
+        </ul>
+        <-->
 
-<div id="content">  
-  {{ content }}
-</div>
+        <h3 class='sidebar-title'>Links</h3>
+        <ul>
+          <li><a href="http://nonlynnear.com" title="nonlynnear">nonlynnear</a></li>
+          <li><a href="http://mofembot.com" title="mofembot">mofembot rides again</a></li>
+          <li><a href="http://larry.baltz.org/blog" title="LarryOnLine">LarryOnLine</a></li>
+        </ul>
 
-<div id="footer">
+        <h3 class='sidebar-title'>Feeds</h3>
+        <ul>
+          <li><a href="http://feeds2.feedburner.com/hpc-sect?format=xml" title="article feed">articles</a></li>
+          <li><a href="http://hpc-sect.disqus.com/comments.rss" title="comment feed">comments</a></li>
+          <!--li><a href="http://api.flickr.com/services/feeds/photos_public.gne?id=19228922@N00&lang=en-us&format=rss_200" title="flickr feed">flickr</a></li>
+          <li><a href="http://feeds.delicious.com/v2/rss/gizmo?count=15" title="delicious feed">del.icio.us</a></li-->
+          <li><a href="http://github.com/hpc-sect.atom" title="github feed">github</a></li>
+          <li><a href="http://twitter.com/statuses/user_timeline/ronakkogta.rss" title="twitter feed">twitter</a></li>
+        </ul>
+      </div><!-- end of sidebar -->
 
-    A group of <a href="http://www.iiit.ac.in">IIIT Hyderabad</a> ||
-    <a href="http://rarchk.github.io">personal blog</a> ||
-    <a href="http://github.com/rarchk">github</a>
+      <div id="content">
+        {{ content }}
+      </div>
 
-<p>&copy; 2010 <a href="/about.html">HPC Sect</a>
+      <div id='footer'>
+        Theme by <a href="http://alpinegizmo.com">David B Anderson</a><br />
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
 
-</div>
+    </div><!-- end of page -->
+  </div><!-- end of site -->
 
-</div>
+  <script type="text/javascript">
+  //<![CDATA[
+  (function() {
+      var links = document.getElementsByTagName('a');
+      var query = '?';
+      for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+          query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+        }
+      }
+      document.write('<script type="text/javascript" src="http://disqus.com/forums/hpc-sect/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+  //]]>
+  </script>
 
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-4105222-2");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-6964420-1");
+      pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
 </body>
 </html>
-
