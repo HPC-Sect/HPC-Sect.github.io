@@ -1,12 +1,68 @@
-destination: ./_site
-auto:        false
-lsi:         false
-server_port: 4000
-pygments:    true
-markdown:    rdiscount
-permalink:   date
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_dir:    images/latex
-  png_url:    /images/latex
+#destination: ./_site
+#auto:        false
+#lsi:         false
+
+#pygments:    true
+#markdown:    rdiscount
+#permalink:   date
+#maruku:
+#  use_tex:    false
+#  use_divs:   false#
+#  png_dir:    images/latex
+#  png_url:    /images/latex
+
+title:            HPC Sect
+description:      HPC for Serialists
+disqus_shortname: rarchk
+
+#Your site's domain goes here. Leave localhost server or blank when working locally.
+url:              http://hpc-sect.github.io/
+
+# Owner/author information
+owner:
+  name:           Ronak Kogta
+  avatar:         avatar.jpg
+  email:          hpc-sect@gmail.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter: RarchK        
+  facebook:       
+  github:  rarchk       
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # For Google Authorship https://plus.google.com/authorship
+  # google plus id, include the '+', eg +mmistakes
+  
+
+# Background image to be tiled on all pages
+background: 
+
+# Analytics and webmaster tools stuff goes here
+google_analytics: yes   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
+
+# Links to include in top navigation
+# For external links add external: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Asia/Kolkata
+future:      true
+highlighter: pygments
+markdown:    kramdown
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+# Amount of post to show on home page
+paginate: 5
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
